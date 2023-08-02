@@ -1,3 +1,3 @@
 # GitIgnoreFileTesting
 Testing
-syncfusion
+syncfusion master checking
