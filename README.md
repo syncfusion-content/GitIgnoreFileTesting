@@ -1,2 +1,3 @@
 # GitIgnoreFileTesting
 Testing
+syncfusion
