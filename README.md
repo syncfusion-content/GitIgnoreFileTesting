@@ -1,2 +1,0 @@
-# GitIgnoreFileTesting
-Testing
