@@ -1,0 +1,25 @@
+
+#loader {
+color: #008cff;
+height: 40px;
+left: 45%;
+position: absolute;
+top: 45%;
+width: 30%;
+}
+
+.control_wrapper {
+  max-width: 500px;
+  min-width: 245px;
+  margin: auto;
+}
+
+#container .e-control .e-upload-files .e-file-container .e-progress-inner-wrap .e-upload-progress {
+  background: yellow;
+  height: 4px;
+}
+
+#container .e-control .e-upload-files .e-file-container .e-progress-inner-wrap {
+  height: 4px;
+  background-color: lightblue;
+}

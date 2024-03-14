@@ -1,0 +1,24 @@
+#container {
+    visibility: hidden;
+  }
+  
+  #loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+  }
+  
+.multiline{
+  margin: 30px auto;
+  width: 30%;
+}
+textarea.e-input,
+.e-float-input textarea,
+.e-float-input.e-control-wrapper textarea,
+.e-input-group textarea,
+.e-input-group.e-control-wrapper textarea{
+  resize: none;
+}

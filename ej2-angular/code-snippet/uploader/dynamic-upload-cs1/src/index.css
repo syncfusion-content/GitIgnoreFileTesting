@@ -1,0 +1,33 @@
+
+#container {
+  visibility: hidden;
+  margin: 0 auto;
+  width: 300px;
+}
+
+#loader {
+  color: #008cff;
+  font-family: 'Helvetica Neue','calibiri';
+  font-size: 14px;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+.control_wrapper {
+  max-width: 500px;
+  margin: auto;
+}
+.e-upload {
+  width: 100%;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.e-upload-actions {
+display: none;
+}
+.e-btn {
+  text-transform: none;
+}

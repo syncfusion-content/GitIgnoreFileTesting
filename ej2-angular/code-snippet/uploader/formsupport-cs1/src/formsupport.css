@@ -1,0 +1,104 @@
+.control_wrapper {
+    max-width: 500px;
+    min-width: 245px;
+    margin: auto;
+}
+
+/* csslint ignore:start */
+#defaultfileupload .e-upload.e-control {
+    position: relative;
+    margin: 15px 0;
+}
+/* csslint ignore:end */
+
+.control_wrapper {
+	max-width: 400px;
+	margin: auto;
+}
+
+#control_wrapper {
+		max-width: 440px;
+		margin: auto;
+		border: 0.5px solid grey;
+		padding: 1% 4% 7%;
+		background: #f9f9f9;
+}
+
+.highcontrast #control_wrapper {
+	background: #000000;
+}
+.upload-area, .e-bigger .upload-area {
+	width: 69%;
+}
+.e-error {
+	padding-top:3px;
+}
+.e-upload {
+	width: 100%;
+	position: relative;
+	margin-top: 15px;
+}
+.control_wrapper .e-upload .e-upload-drag-hover {
+	margin: 0;
+}
+
+.submit-btn {
+	margin-top: 15px;
+	position: relative;            
+}
+.submitBtn {
+	position: relative;
+	float: right;            
+}
+.form-support {
+	width: 100%;            
+}
+.success .form-support {
+	display: none;
+}
+.success .successmsg {
+	border: 0.5px solid green;
+	padding: 10%;
+	color: green;
+}
+
+#form1 {
+	position: relative;
+	top: 14%;
+}
+.form-support td {
+	width: 100%;
+	padding-top:4%;
+}
+.e-upload {
+	display: none;
+}
+
+.choose-file{
+	width: 60%;
+}
+
+#browse {
+	margin-right: -45%;
+	float: right;
+	margin-top: -28px;
+}      
+.e-bigger #browse {
+	top: -41px;            
+}
+
+/* csslint ignore:start */
+.e-bigger.material #browse {
+	top: -35px;            
+}
+.e-bigger.fabric #browse, .e-bigger.highcontrast #browse {
+	top: -41px;
+	left: 50%;
+}
+/* csslint ignore:end */
+.fabric #browse, .highcontrast #browse {
+	top: -32px;
+}
+.bootstrap #browse {
+	top: -34px;
+}

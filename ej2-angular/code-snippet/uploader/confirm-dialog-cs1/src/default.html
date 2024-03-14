@@ -1,0 +1,8 @@
+<div class="control-section" id="container">
+    <div class="col-lg-9">
+        <div class="control_wrapper">
+            <ejs-uploader #defaultupload id='fileupload' [asyncSettings]='path' (removing)='onremoving($event)'></ejs-uploader>
+            <ejs-dialog #dialog id='dialog' [content]='content' [buttons]='buttons' [width]='width' [visible]='visible' [target]='target'></ejs-dialog>
+        </div>
+    </div>
+</div>

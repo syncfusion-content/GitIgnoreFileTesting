@@ -1,0 +1,59 @@
+<div class="control-section">
+    <div class="col-lg-12">
+            <div class="control_wrapper" id="control_wrapper">
+                    <form #formElement id="form1" method="post">
+                        <div class="form-group" style="padding-top: 11px;">
+                                <div class="e-float-input">
+                                    <input type="text" id="name" name="name" data-required-message="* Enter your name" required="" data-msg-containerid="nameError">
+                                    <span class="e-float-line"></span>
+                                    <label class="e-float-text e-label-top" for="name">Name</label>
+                                </div>   
+                                <div id="nameError"></div>                     
+                            </div>
+                            <div class="form-group" style="padding-top: 11px;">
+                                    <div class="e-float-input">
+                                        <input type="email" id="email" name="email" data-validation="email" data-required-message="* Enter your mail" required="" data-msg-containerid="mailError">
+                                        <span class="e-float-line"></span>
+                                        <label class="e-float-text e-label-top" for="email">Email</label>
+                                    </div>
+                                    <div id="mailError"></div> 
+                            </div>
+        
+                            <div class="form-group" style="padding-top: 11px;">
+                                    <div class="e-float-input">
+                                        <input type="text" id="Mobileno" name="mobile" data-required-message="* Enter your mobile number" required="" data-msg-containerid="noError">
+                                        <span class="e-float-line"></span>
+                                        <label class="e-float-text e-label-top" for="mobile">Mobile No</label>
+                                    </div>   
+                                    <div id="noError"></div>                     
+                            </div>
+                            <div id="dropArea">
+                                <div class="form-group" style="padding-top: 11px;">
+                                        <div class="e-float-input upload-area">
+                                            <input type="text" id="upload" readonly name="upload" data-required-message="* Select any file" required="" data-msg-containerid="uploadError">
+                                            <button id="browse" class="e-control e-btn e-info" (click)='browseClick()'>Browse..</button>                        
+                                            <span class="e-float-line"></span>
+                                            <label class="e-float-text e-label-top" for="upload">Choose a file</label>
+                                        </div>   
+                                        <div id="uploadError"></div>                     
+                                        <ejs-uploader #defaultupload id='fileupload' allowedExtensions = "image/*" [autoUpload]=false  (selected)='onFileSelect($event)'></ejs-uploader>                                        
+                                </div>
+                                </div>
+                                <div class="form-group" style="padding-top: 11px;">
+                                        <div class="e-float-input">
+                                            <textarea rows="2" id="Address" ></textarea>
+                                            <span class="e-float-line"></span>
+                                            <label class="e-float-text e-label-top">Address</label>
+                                        </div>
+                                </div>                          
+                        </form> 
+                        <div class="submitBtn">
+                            <button class="submit-btn e-btn" id="submit-btn" (click)= "Submit()">Submit</button>                        
+                        </div>                                                                          
+                        <ejs-dialog id="confirmationDialog" #Dialog [animationSettings]='animationSettings' [content]='content'  [target]='target' [width]='width' [visible]="visible" [isModal]="isModal"  (overlayClick)="overlayClick()">
+                        </ejs-dialog>
+                    
+                </div>
+    </div>
+
+</div>

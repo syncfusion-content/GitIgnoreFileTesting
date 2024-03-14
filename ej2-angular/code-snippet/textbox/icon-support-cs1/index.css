@@ -1,0 +1,44 @@
+#container {
+  visibility: hidden;
+}
+
+#loader {  
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.wrap {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 10px;
+  width: 260px;
+}
+
+
+.wrap label { /* csslint allow: adjoining-classes */
+ font-weight:bold;
+}
+
+.wrap .e-input-group {/* csslint allow: adjoining-classes */
+   margin:25px 0;
+}
+
+.e-input-group-icon:before {
+  font-family: e-icons;
+}
+
+.e-input-group .e-input-group-icon.e-input-popup-date { /* csslint allow: adjoining-classes */
+  font-size:16px;
+}
+
+.e-input-group.e-small .e-input-group-icon.e-input-popup-date { /* csslint allow: adjoining-classes */
+  font-size:14px;
+}
+
+.e-input-group-icon.e-input-popup-date:before { /* csslint allow: adjoining-classes */
+  content: "";
+}

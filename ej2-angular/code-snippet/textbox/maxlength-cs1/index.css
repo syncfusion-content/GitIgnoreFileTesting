@@ -1,0 +1,26 @@
+#container {
+    visibility: hidden;
+  }
+  
+  #loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+  }
+  
+  .multiline{
+    margin-top: 10px;
+    margin-left: 170px;
+    width: 30%;
+  }
+  .label{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 170px;
+  }
+  #length{
+    margin-left: 170px;
+  }
