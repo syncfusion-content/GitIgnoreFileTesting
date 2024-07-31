@@ -1,29 +1,59 @@
-import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
-import { sampleData } from './datasource';
-import { ReorderService } from '@syncfusion/ej2-angular-treegrid';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { ButtonModule, CheckBoxModule } from '@syncfusion/ej2-angular-buttons'
+import { enableRipple } from '@syncfusion/ej2-base'
+import { SwitchModule} from '@syncfusion/ej2-angular-buttons'
+import { FormsModule } from '@angular/forms'
+
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-container',
-    template: `<ejs-treegrid #treegrid [dataSource]='data' height='285' [allowReordering]='true' [allowSelection]='false' [treeColumnIndex]='1' childMapping='subtasks' >
-                  <e-columns>
-                      <e-column field='taskID' headerText='Task ID' textAlign='Right' width=90></e-column>
-                      <e-column field='taskName' headerText='Task Name' textAlign='Left' width=180></e-column>
-                      <e-column field='startDate' headerText='Start Date' textAlign='Right' format='yMd' width=120></e-column>
-                      <e-column field='duration' headerText='Duration' textAlign='Right' width=120 [lockColumn]= 'true' [customAttributes]='customAttributes'></e-column>
-                      <e-column field='progress' headerText='Progress' textAlign='Right' width=120></e-column>
-                  </e-columns>
-                </ejs-treegrid>`,
-                providers: [ReorderService],
-                encapsulation: ViewEncapsulation.None,
-                styleUrls: ['./custom-column.style.css']
+imports: [
+        
+        ButtonModule,
+        CheckBoxModule,
+        SwitchModule,
+        FormsModule
+    ],
+
+
+standalone: true,
+    selector: 'app-root',
+    styleUrls:['./style.css'],
+    template:`<div [ngClass]="{'e-dark-mode': isChecked, 'dark': isChecked}">
+    <ejs-checkbox label="Enable Darkmode" (change)="toggleCheckbox()"></ejs-checkbox><br/>
+   
+     <!-- Primary Button - Used to represent a primary action. -->
+     <button ejs-button cssClass="e-primary">Button</button>
+   
+     <!-- Success Button - Used to represent a positive action. -->
+     <button ejs-button cssClass="e-success">Button</button>
+   
+     <!-- Info Button - Used to represent an informative action -->
+     <button ejs-button cssClass="e-info">Button</button>
+   
+     <!-- Warning Button - Used to represent an action with caution. -->
+     <button ejs-button cssClass="e-warning">Button</button>
+   
+     <!-- Danger Button - Used to represent a negative action. -->
+     <button ejs-button cssClass="e-danger">Button</button>
+     </div>`  
 })
-export class AppComponent implements OnInit {
 
-    public data?: Object[];
-    public customAttributes?: Object;
+export class AppComponent { 
+  public className:string="";
+  public checked:boolean=true;
 
-    ngOnInit(): void {
-        this.data = sampleData;
-         this.customAttributes = {class: 'customcss'};
+  public isChecked = false;
+
+  toggleCheckbox() {
+    this.isChecked = !this.isChecked;
+    if (this.isChecked) {
+      document.body.classList.add('dark');
     }
+    else{
+      document.body.classList.remove('dark');
+    } 
+  }
+  
 }

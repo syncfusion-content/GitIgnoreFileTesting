@@ -1,29 +1,27 @@
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { ButtonModule } from '@syncfusion/ej2-angular-buttons'
+import { enableRipple } from '@syncfusion/ej2-base'
+import { FormsModule } from '@angular/forms'
 
-
-import { Component, OnInit } from '@angular/core';
-import { sampleData } from './datasource';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-container',
-    template: `<ejs-treegrid [dataSource]='data'  [treeColumnIndex]='1' [allowPaging]='true' [pageSettings]='pageSettings' childMapping='subtasks' >
-        <e-columns>
-                    <e-column field='taskID' headerText='Task ID' textAlign='Right' width=90></e-column>
-                    <e-column field='taskName' headerText='Task Name' textAlign='Left' width=180></e-column>
-                    <e-column field='startDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-                    <e-column field='duration' headerText='Duration' textAlign='Right' width=80></e-column>
-        </e-columns>
-                </ejs-treegrid>`
+imports: [
+        
+        ButtonModule,
+        FormsModule
+    ],
+
+
+standalone: true,
+    selector: 'app-root',
+    styleUrls:['./style.css'],
+    template:`<div>   
+     <!-- Primary Button - Used to represent a primary action. -->
+     <button ejs-button cssClass="e-primary">Button</button>
+     </div>`  
 })
-export class AppComponent implements OnInit {
 
-    public data?: Object[];
-    public pageSettings?: Object ;
-
-    ngOnInit(): void {
-        this.data = sampleData;
-        this.pageSettings = {pageSize: 7};
-    }
+export class AppComponent { 
 }
-
-
-
