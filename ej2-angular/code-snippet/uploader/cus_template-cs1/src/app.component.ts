@@ -1,3 +1,7 @@
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { UploaderModule } from '@syncfusion/ej2-angular-inputs'
+
 
 
 
@@ -7,6 +11,12 @@ import { UploaderComponent, FileInfo, SelectedEventArgs, RemovingEventArgs  } fr
 import { createSpinner, showSpinner, hideSpinner  } from '@syncfusion/ej2-popups';
 
 @Component({
+imports: [
+         UploaderModule
+    ],
+
+
+standalone: true,
     selector: 'app-root',
     template: `<div id='dropArea'>
                     <span id='drop' class="droparea"> Drop files here or <a href="" id='browse'><u>Browse</u></a> </span>
@@ -19,8 +29,8 @@ export class AppComponent {
     public uploadObj?: UploaderComponent;
 
     public path: Object = {
-        saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-        removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
+        saveUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Save',
+        removeUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Remove'
     };
 
     ngAfterViewInit() {

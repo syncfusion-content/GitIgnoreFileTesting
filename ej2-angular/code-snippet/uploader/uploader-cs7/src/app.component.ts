@@ -1,3 +1,7 @@
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { UploaderModule } from '@syncfusion/ej2-angular-inputs'
+
 
 
 
@@ -6,6 +10,12 @@ import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
 import { getUniqueID } from '@syncfusion/ej2-base';
 
 @Component({
+imports: [
+         UploaderModule
+    ],
+
+
+standalone: true,
     selector: 'app-root',
     template: `
                <ejs-uploader #defaultupload [asyncSettings]='path' autoUpload='false' (uploading)='onUploadBegin($event)'></ejs-uploader>
@@ -13,8 +23,8 @@ import { getUniqueID } from '@syncfusion/ej2-base';
 })
 export class AppComponent {
     public path: Object = {
-      saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-      removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove' };
+      saveUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Save',
+      removeUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Remove' };
     constructor() {
     }
     public onUploadBegin(args: UploadingEventArgs) {

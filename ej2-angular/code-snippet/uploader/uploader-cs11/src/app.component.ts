@@ -1,3 +1,7 @@
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { UploaderModule } from '@syncfusion/ej2-angular-inputs'
+
 
 
 
@@ -5,6 +9,12 @@ import { Component } from '@angular/core';
 import { detach, L10n } from '@syncfusion/ej2-base';
 
 @Component({
+imports: [
+         UploaderModule
+    ],
+
+
+standalone: true,
     selector: 'app-root',
     template: `
                <ejs-uploader #defaultupload  [asyncSettings]='path' locale= 'fr-CH'  autoUpload = 'false'></ejs-uploader>
@@ -12,8 +22,8 @@ import { detach, L10n } from '@syncfusion/ej2-base';
 })
 export class AppComponent {
     public path: Object = {
-      saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-      removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove' };
+      saveUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Save',
+      removeUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Remove' };
     ngOnInit() {
         L10n.load({
     "fr-CH": {

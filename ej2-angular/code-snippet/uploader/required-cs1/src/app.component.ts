@@ -1,3 +1,9 @@
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { FormsModule } from '@angular/forms'
+import { UploaderModule } from '@syncfusion/ej2-angular-inputs'
+import { DialogModule } from '@syncfusion/ej2-angular-popups'
+
 
 
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
@@ -5,6 +11,12 @@ import { EmitType, createElement, detach } from '@syncfusion/ej2-base';
 import { UploaderComponent, SelectedEventArgs, FormValidator, FormValidatorModel  } from '@syncfusion/ej2-angular-inputs';
 import { DialogComponent } from '@syncfusion/ej2-angular-popups';
 @Component({
+imports: [
+        FormsModule, UploaderModule, DialogModule
+    ],
+
+
+standalone: true,
     selector: 'app-root',
     templateUrl: './default.html',
     styleUrls: ['./index.css']
@@ -17,8 +29,8 @@ export class AppComponent {
     public dialog?: DialogComponent;
 
     public path: Object = {
-        saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-        removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
+        saveUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Save',
+        removeUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Remove'
     };
     public removeFile: any = [];
     public content: string = 'Your details have been updated successfully, Thank you.';
